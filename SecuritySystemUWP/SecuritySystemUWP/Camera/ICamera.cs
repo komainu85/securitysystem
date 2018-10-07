@@ -7,7 +7,7 @@ using Windows.Storage;
 
 namespace SecuritySystemUWP
 {
-    public interface ICamera
+    public interface ICamera : IDisposable
     {
         bool IsEnabled
         {
@@ -17,7 +17,5 @@ namespace SecuritySystemUWP
         Task Initialize();
 
         Task TriggerCapture();
-
-        void Dispose();
     }
 }
